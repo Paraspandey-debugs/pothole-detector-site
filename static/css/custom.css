@@ -1,0 +1,105 @@
+/* Custom styles and animations for Pothole Detection Site */
+
+:root {
+  --primary: #f59e0b;
+  --primary-hover: #d97706;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
+
+/* Glassmorphism panel */
+.glass-panel {
+  background: rgba(30, 41, 59, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-subtle {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Dropzone drag active */
+.dropzone-active {
+  border-color: #f59e0b !important;
+  background-color: rgba(245, 158, 11, 0.08) !important;
+}
+
+/* Glowing badge and borders */
+.glow-amber {
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.35);
+}
+.glow-red {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.35);
+}
+.glow-emerald {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.35);
+}
+
+/* Pulsing radar scan effect */
+@keyframes radar-scan {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.2;
+  }
+}
+
+.scanner-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #f59e0b, transparent);
+  box-shadow: 0 0 12px #f59e0b;
+  animation: radar-scan 1.6s ease-in-out infinite alternate;
+}
+
+/* Image comparison container */
+.img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #0b0f19;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+}
+
+/* Image hover zoom */
+.zoom-btn {
+  transition: all 0.2s ease-in-out;
+}
+.zoom-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Table row highlight */
+.table-row-highlight {
+  transition: background-color 0.15s ease;
+}
+.table-row-highlight:hover {
+  background-color: rgba(245, 158, 11, 0.08);
+}
