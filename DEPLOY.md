@@ -57,7 +57,7 @@ If you prefer to configure manually via the Render UI:
    | **Region** | Oregon (US West) or Frankfurt (EU) |
    | **Branch** | `main` |
    | **Runtime** | `Python 3` |
-   | **Build Command** | `pip install -r requirements.txt` |
+   | **Build Command** | `pip install -r requirements.txt && (pip uninstall -y opencv-python || true) && pip install --force-reinstall opencv-python-headless` |
    | **Start Command** | `uvicorn app:app --host 0.0.0.0 --port $PORT` |
    | **Instance Type** | `Free` |
 4. Expand **Advanced Settings**:
